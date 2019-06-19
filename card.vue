@@ -8,18 +8,10 @@
       <div class="card__job">{{job}}</div>
       <p class="card__text">{{text}}</p>
       <div class="card__social">
-        <a class="icon" href="#">
-          <twitter-icon/>
-        </a>
-        <a class="icon" href="#">
-          <facebook-icon/>
-        </a>
-        <a class="icon" href="#">
-          <github-icon/>
-        </a>
-        <a class="icon" href="#">
-          <dribbble-icon/>
-        </a>
+        <a class="icon bd-twitter" href="javascript:void(0)"></a>
+        <a class="icon bd-facebook" href="javascript:void(0)"></a>
+        <a class="icon bd-dribbble" href="javascript:void(0)"></a>
+        <a class="icon bd-github" href="javascript:void(0)"></a>
       </div>
       <button class="btn btn-primary waves-effect waves-classic">Follow</button>
     </div>
@@ -58,7 +50,7 @@ export default {
 .card {
   &_shadow {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    margin-bottom: 30px;
+		margin-bottom: 30px;
   }
   &__content {
     padding: 40px 15px;
@@ -80,15 +72,11 @@ export default {
     color: #9e9e9e;
   }
   &__social {
-		color: fff;
-    width: 160px;
-    display: flex;
-    justify-content: space-around;
-    margin: 25px;
+    margin: 25px 0;
   }
   &__footer {
     display: flex;
-    justify-content: space-around;
+		justify-content: space-around;
     padding: 10px;
     background-color: #f6f9fd;
     border-top: none;
@@ -100,6 +88,8 @@ export default {
     font-size: 20px;
     font-weight: 500;
     color: #616161;
+  }
+	@media screen and (width: 500px) {
   }
 }
 </style>

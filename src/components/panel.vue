@@ -27,7 +27,34 @@
       <div class="tabs__content">
         <div class="tabs__tab" v-if="activeTab === 0">
           <div class="post-list">
-            <post></post>
+            <post
+              avatar="./img/2.jpg"
+              name="Terrance arnold"
+              description="posted an updated"
+              online="active 14 minutes ago"
+              text="“Check if it can be corrected with overflow : hidden”"
+            ></post>
+            <post
+              avatar="./img/3.jpg"
+              name="Julius"
+              description="uploaded 4 photos"
+              online="active 14 minutes ago"
+            ></post>
+            <post
+              avatar="./img/3.jpg"
+              name="Owen Hunt"
+              description="posted a new note"
+              online="active 14 minutes ago"
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa"
+            ></post>
+            <post
+              avatar="./img/5.webp"
+              name="Terrance Arnold"
+              description="uploaded 4 photos"
+              online="active 14 minutes ago"
+              title="Getting Started"
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris."
+            ></post>
           </div>
         </div>
         <div class="tabs__tab" v-if="activeTab === 1">2</div>
@@ -38,9 +65,10 @@
 </template>
  
 <script>
+import post from "./post.vue";
 
 export default {
-	name: 'panel',
+  name: "panel",
   data() {
     return {
       activeTab: 0
@@ -58,7 +86,10 @@ export default {
     setActive(num) {
       this.activeTab = num;
     }
-  } 
+  },
+  components: {
+    post
+  }
 };
 </script>
 
