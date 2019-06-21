@@ -56,6 +56,11 @@
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris."
             ></post>
           </div>
+					<div class="panel__footer">
+						<a href="#" class="btn btn-block btn_gray">
+							Show more
+						</a>
+					</div>
         </div>
         <div class="tabs__tab" v-if="activeTab === 1">2</div>
         <div class="tabs__tab" v-if="activeTab === 2">3</div>
@@ -127,9 +132,12 @@ export default {
       border-bottom-color: #bdbdbd;
     }
     &.active {
-      color: #3f51b5;
-      background-color: transparent;
-      border-bottom: 2px solid #3f51b5;
+      color: #2196f3;
+      border-bottom: 2px solid #2196f3;
+      &:hover {
+        color: #2196f3;
+        border-bottom: 2px solid #2196f3;
+      }
     }
   }
 }

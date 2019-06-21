@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <top-nav></top-nav>
+    <top-nav/>
     <div class="contaiber-fluid content">
       <div class="row">
         <div class="col-lg-3">
@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class="footer">футер</div>
+    <site-footer/>
   </div>
 </template>
 
@@ -27,6 +27,7 @@
 import card from "./components/card.vue";
 import panel from "./components/panel.vue";
 import topNav from "./components/topNav.vue";
+import siteFooter from "./components/site-footer.vue";
 
 export default {
   name: "app",
@@ -49,7 +50,8 @@ export default {
   components: {
     card,
     panel,
-    topNav
+    topNav,
+    siteFooter
   }
 };
 </script>
@@ -78,7 +80,7 @@ body {
   background: #f1f4f5;
   padding: 30px;
 }
-.footer {
+.site-footer {
   flex: 0 0 auto;
 }
 .avatar {
@@ -119,15 +121,8 @@ body {
   background-position: center;
   background-size: cover;
 }
-.waves-effect {
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  overflow: hidden;
-  cursor: pointer;
-  user-select: none;
-}
 .material-design-icon {
+  font-size: 16px;
   transform: translateY(-15%);
 }
 .icon {
@@ -138,5 +133,14 @@ body {
   top: 50%;
   right: 50%;
   transform: translate(105%, -105%);
+}
+.btn {
+  &_gray {
+    color: #757575 !important;
+    background-color: #eee !important;
+    &:hover {
+      background-color: #f5f5f5 !important;
+    }
+  }
 }
 </style>

@@ -12,6 +12,7 @@ import Account from "vue-material-design-icons/Account.vue";
 import Settings from "vue-material-design-icons/Settings.vue";
 import Bell from "vue-material-design-icons/Bell.vue";
 import Email from "vue-material-design-icons/Email.vue";
+import CardsHeart from "vue-material-design-icons/CardsHeart.vue";
 Vue.component("twitter-icon", TwitterIcon);
 Vue.component("facebook-icon", FacebookIcon);
 Vue.component("github-icon", GithubIcon);
@@ -20,12 +21,12 @@ Vue.component("account-icon", Account);
 Vue.component("settings-icon", Settings);
 Vue.component("bell-icon", Bell);
 Vue.component("email-icon", Email);
+Vue.component("cards-heart", CardsHeart);
 
 Vue.config.productionTip = false
 
 new Vue({
 	render: h => h(App),
-}).$mount('#app')
-
+}).$mount('#app');
 
 

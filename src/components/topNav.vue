@@ -2,7 +2,7 @@
   <nav class="top-nav container-fluid">
     <ul class="top-nav__inner">
       <li class="top-nav__item">
-        <a class="top-nav__link" href="#" @click="setActive(1)">
+        <a class="top-nav__link" href="#" @click="setActive(1)" :class="{ active: active === 1}">
           <span class="flag-icon" style="background-image: url(./img/flags/us.svg);"></span>
         </a>
         <div class="nav-dropdown top-nav__dropdown" v-if="active === 1">
@@ -40,7 +40,7 @@
       </li>
 
       <li class="top-nav__item">
-        <a class="top-nav__link" href="#" @click="setActive(2)">
+        <a class="top-nav__link" href="#" @click="setActive(2)" :class="{ active: active === 2}">
           <span class="avatar avatar__sm">
             <img class="avatar__img" src="./assets/5.webp" alt>
             <i class="avatar__i"></i>
@@ -71,7 +71,7 @@
       </li>
 
       <li class="top-nav__item">
-        <a class="top-nav__link" href="#" @click="setActive(3)">
+        <a class="top-nav__link" href="#" @click="setActive(3)" :class="{ active: active === 3}">
           <bell-icon/>
           <span class="badge badge-pill badge-danger badge_up">5</span>
         </a>
@@ -126,7 +126,7 @@
       </li>
 
       <li class="top-nav__item">
-        <a class="top-nav__link" href="#" @click="setActive(4)">
+        <a class="top-nav__link" href="#" @click="setActive(4)" :class="{ active: active === 4}">
           <email-icon/>
           <span class="badge badge-pill badge-info badge_up">3</span>
         </a>
@@ -166,7 +166,7 @@
 
       <li class="nav-item dropdown">
         <a
-          class="nav-link waves-effect waves-light waves-round"
+          class="nav-link"
           data-toggle="dropdown"
           href="javascript:void(0)"
           title="Messages"
@@ -185,7 +185,7 @@
       </li>
       <li class="nav-item" id="toggleChat">
         <a
-          class="nav-link waves-effect waves-light waves-round"
+          class="nav-link"
           data-toggle="site-sidebar"
           href="javascript:void(0)"
           title="Chat"
@@ -231,7 +231,6 @@ export default {
   justify-content: flex-end;
   font-size: 14px;
   background-color: #2196f3;
-  font-family: "Roboto", sans-serif;
   &__inner {
     display: flex;
     padding-left: 0;
@@ -252,9 +251,14 @@ export default {
     align-items: center;
     line-height: 22px;
     padding: 10px 15px;
-		&:hover{
-			color: #fff;
-		}
+    &.active {
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    &:hover {
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
   }
 }
 .nav-dropdown {
@@ -326,7 +330,6 @@ export default {
   }
   &__item {
     color: #424242;
-
     padding: 15px 0;
     text-decoration: none;
     display: flex;
