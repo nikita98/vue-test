@@ -182,11 +182,11 @@ body {
     width: 24px;
     height: 24px;
     border-radius: 0.215rem;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in 0s;
     border: 1px solid #e0e0e0;
   }
   &__checkbox:checked ~ &__checkbox-label-after {
-    opacity: 0.5;
+    opacity: 0.2;
     transform: scale(0, 0);
   }
 
@@ -201,7 +201,8 @@ body {
     margin-right: 12px;
   }
   &__btn {
-    margin-top: 60px;
+    margin-top: 50px;
+		font-size: 18px !important;
     background-color: #2196f3 !important;
     border-color: #2196f3 !important;
   }

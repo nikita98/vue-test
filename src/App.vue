@@ -140,6 +140,7 @@ body {
   transform: translate(105%, -105%);
 }
 .btn {
+	padding: 6px 15px !important;
   &_gray {
     color: #1e88e5 !important;
     background-color: #eee !important;

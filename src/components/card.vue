@@ -72,12 +72,19 @@ export default {
   }
   &__avatar {
     width: 130px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   &__name {
     margin-bottom: 10px;
+		font-size: 18px;
+		font-weight: 400;
     color: #212121;
   }
+	&__text{
+		color: #757575;
+    margin-bottom: 5px;
+
+	}
   &__job {
     margin-bottom: 20px;
     color: #9e9e9e;
