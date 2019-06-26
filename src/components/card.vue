@@ -50,7 +50,10 @@ export default {
     follower: Number,
     following: Number,
     tweets: Number
-  }
+	},
+	created(){
+		console.log(this.name);
+	}
 };
 </script>
 

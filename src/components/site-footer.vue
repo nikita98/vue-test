@@ -9,7 +9,7 @@
     <div class="site-footer__right">
       Crafted with
       <i class="icon site-footer__icon">
-        <cards-heart/>
+        <cards-heart-icon/>
       </i> by
       <a href="https://themeforest.net/user/creation-studio">Creation Studio</a>
     </div>

@@ -1,21 +1,23 @@
 <template>
   <div class="wrapper">
     <top-nav/>
-    <div class="contaiber-fluid content">
-      <div class="row">
-        <div class="col-lg-3">
-          <card
-            avatar="./img/5.webp"
-            name="Terrance arnold"
-            job="Art director"
-            text="Hi! I'm Adrian the Senior UI Designer at AmazingSurge. We hope you enjoy the design and quality of Social."
-            follower="260"
-            following="180"
-            tweets="2000"
-          ></card>
-        </div>
-        <div class="col-lg-9">
-          <panel/>
+    <div class="content">
+      <div class="contaiber-fluid main">
+        <div class="row">
+          <div class="col-lg-3">
+            <card
+              avatar="./img/5.webp"
+              name="Terrance arnold"
+              job="Art director"
+              text="Hi! I'm Adrian the Senior UI Designer at AmazingSurge. We hope you enjoy the design and quality of Social."
+              follower="260"
+              following="180"
+              tweets="2000"
+            ></card>
+          </div>
+          <div class="col-lg-9">
+            <panel/>
+          </div>
         </div>
       </div>
     </div>
@@ -78,7 +80,9 @@ body {
   flex: 1 0 auto;
   min-height: 100%;
   background: #f1f4f5;
-  padding: 30px;
+}
+.main{
+	padding: 30px;
 }
 .site-footer {
   flex: 0 0 auto;
@@ -98,6 +102,7 @@ body {
     border: 2px solid #fff;
     &_gray {
       background-color: #616161;
+      color: #1e88e5;
     }
     &_orange {
       background-color: #ff9800;
@@ -136,9 +141,10 @@ body {
 }
 .btn {
   &_gray {
-    color: #757575 !important;
+    color: #1e88e5 !important;
     background-color: #eee !important;
     &:hover {
+      color: #757575 !important;
       background-color: #f5f5f5 !important;
     }
   }

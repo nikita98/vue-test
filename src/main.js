@@ -21,12 +21,11 @@ Vue.component("account-icon", Account);
 Vue.component("settings-icon", Settings);
 Vue.component("bell-icon", Bell);
 Vue.component("email-icon", Email);
-Vue.component("cards-heart", CardsHeart);
+Vue.component("cards-heart-icon", CardsHeart);
 
 Vue.config.productionTip = false
 
 new Vue({
 	render: h => h(App),
 }).$mount('#app');
-
 

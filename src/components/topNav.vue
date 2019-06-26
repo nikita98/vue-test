@@ -183,6 +183,7 @@
           </div>
         </div>
       </li>
+			
       <li class="nav-item" id="toggleChat">
         <a
           class="nav-link"

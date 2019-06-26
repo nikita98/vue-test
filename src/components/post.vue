@@ -12,11 +12,19 @@
           </div>
           <div class="post__active">{{online}}</div>
         </div>
-        <div class="post__body">
-          <div class="post__img-galerry" v-if="imgSrc.lenght">
+        <div class="post__body" :class="{post__body_gallery: imgLength > 1}">
+          <div class="post__solo-img" v-if="imgLength == 1">
             <img class="post__img" :src="imgSrc[0]" alt="image">
           </div>
-          <!-- <img class="post__img" v-if="imgSrc.lenght > 1" :src="imgSrc[0]" alt="image"> -->
+          <div class="post__img-galerry" v-if="imgLength > 1">
+            <img
+              class="post__img"
+              v-for="(item, index) in imgSrc"
+              v-bind:key="index"
+              :src="imgSrc[index]"
+              alt="image"
+            >
+          </div>
           <div class="post__text">
             <div class="post__title">{{title}}</div>
             {{text}}
@@ -40,13 +48,16 @@ export default {
       type: String
     },
     imgSrc: {
-			type: Array,
-			default: function() {
-				return [];
-			}
-		},
+      type: Array,
+      default: () => {}
+    },
     title: String,
     text: String
+  },
+  computed: {
+    imgLength: function() {
+      return this.imgSrc ? this.imgSrc.length : 0;
+    }
   }
 };
 </script>
@@ -71,27 +82,41 @@ export default {
   }
   &__name {
     color: #424242;
-    font-weight: 400;
     margin-right: 0.25em;
   }
   &__description {
     color: #9e9e9e;
-    font-weight: 300;
     font-size: 11px;
   }
   &__active {
     color: #9e9e9e;
-    font-weight: 300;
     font-size: 11px;
     margin-bottom: 20px;
   }
   &__title {
     color: #424242;
-    font-weight: 400;
     font-size: 18px;
   }
+  &__body {
+    display: flex;
+		&_gallery{
+			flex-wrap: wrap;
+		}
+  }
+  &__img-galerry {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  &__img {
+    width: 100%;
+    max-width: 220px;
+    min-width: 200px;
+    max-height: 150px;
+    padding: 0 20px 20px 0;
+  }
   &__text {
-    font-weight: 300;
     font-size: 14px;
     color: #757575;
   }
