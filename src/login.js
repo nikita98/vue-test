@@ -6,7 +6,6 @@ import 'vue-material-design-icons/styles.css'
 
 import Check from "vue-material-design-icons/Check.vue";
 import TwitterIcon from "vue-material-design-icons/Twitter.vue";
-import FacebookIcon from "vue-material-design-icons/Facebook.vue";
 import GooglePlus from "vue-material-design-icons/GooglePlus.vue";
 
 Vue.component("check-icon", Check);

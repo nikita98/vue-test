@@ -21,7 +21,7 @@
           <dribbble-icon/>
         </a>
       </div>
-      <button class="btn btn-primary">Follow</button>
+      <button class="btn btn_primary">Follow</button>
     </div>
     <div class="card__footer">
       <div class="card__stat">

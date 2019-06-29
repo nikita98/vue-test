@@ -30,11 +30,9 @@
   border-top: 1px solid #e0e0e0;
   font-size: 14px;
   font-weight: 300;
-	color: #757575;
+  color: #757575;
   &__icon {
-    .material-design-icon{
-			transform: translateY(0%);
-		}
+    transform: translateY(0%);
     color: red;
   }
 }

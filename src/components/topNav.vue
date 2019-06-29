@@ -1,5 +1,5 @@
 <template>
-  <nav class="top-nav container-fluid">
+  <nav class="top-nav">
     <ul class="top-nav__inner">
       <li class="top-nav__item">
         <a class="top-nav__link" href="#" @click="setActive(1)" :class="{ active: active === 1}">
@@ -42,7 +42,7 @@
       <li class="top-nav__item">
         <a class="top-nav__link" href="#" @click="setActive(2)" :class="{ active: active === 2}">
           <span class="avatar avatar__sm">
-            <img class="avatar__img" src="./assets/5.webp" alt>
+            <img class="avatar__img" src="./assets/Terrance arnold.webp" alt>
             <i class="avatar__i"></i>
           </span>
         </a>
@@ -91,7 +91,7 @@
               </div>
             </a>
             <a class="nav-notification__item" href="#">
-              <div class="nav-notification__left nav-notification__left_green">
+              <div class="nav-notification__left green-bg">
                 <account-icon/>
               </div>
               <div class="nav-notification__item-content">
@@ -109,7 +109,7 @@
               </div>
             </a>
             <a class="nav-notification__item" href="#">
-              <div class="nav-notification__left nav-notification__left_blue">
+              <div class="nav-notification__left nav-notification__left blue-bg">
                 <account-icon/>
               </div>
               <div class="nav-notification__item-content">
@@ -137,20 +137,20 @@
           </div>
           <div class="nav-notification__items">
             <nav-message
-              avatar="./img/2.jpg"
+              avatar="./img/Mary Adams.jpg"
               title="Mary Adams"
               time="30 minutes ago"
               text="Anyways, i would like just do it"
             />
             <nav-message
-              avatar="./img/3.jpg"
+              avatar="./img/Caleb Richards.jpg"
               online="1"
               title="Caleb Richards"
               time="12 hours ago"
               text="Anyways, i would like just do it"
             />
             <nav-message
-              avatar="./img/4.jpg"
+              avatar="./img/June Lane.jpg"
               online="2"
               title="June Lane"
               time="2 days ago"
@@ -163,44 +163,252 @@
           </div>
         </div>
       </li>
-
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link"
-          data-toggle="dropdown"
-          href="javascript:void(0)"
-          title="Messages"
-          aria-expanded="false"
-          data-animation="scale-up"
-          role="button"
-        >
-          <i class="icon md-email" aria-hidden="true"></i>
+      <li class="nav-item top-nav__item">
+        <a class="top-nav__link" href="#" @click="setActive(5)" :class="{ active: active === 5}">
+          <chat-icon/>
         </a>
-        <div class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
-          <div class="dropdown-menu-header" role="presentation">
-            <h5>MESSAGES</h5>
-            <span class="badge badge-round badge-info">New 3</span>
+        <div class="slide-panel top-nat__slide-panel" v-if="active === 5">
+          <ul class="tabs__links">
+            <li class="tabs__link-wrap tabs__link-wrap_big">
+              <a
+                class="tabs__link tabs__link_big"
+                @click="setActive(0, true)"
+                :class="{'active': activeTab === 0}"
+              >
+                <chat-icon/>
+              </a>
+              <a
+                class="tabs__link tabs__link_big"
+                @click="setActive(1, true)"
+                :class="{'active': activeTab === 1}"
+              >
+                <account-icon/>
+              </a>
+              <a
+                class="tabs__link tabs__link_big"
+                @click="setActive(2, true)"
+                :class="{'active': activeTab === 2}"
+              >
+                <settings-icon/>
+              </a>
+            </li>
+          </ul>
+          <div class="tabs__content">
+            <div class="tabs__tab" v-if="activeTab === 0">
+              <div class="slide-panel__inner">
+                <div class="slide-panel__header">
+                  <div class="slide-panel__title">
+                    <div>FRIEND LIST</div>
+                    <div class="slide-panel__title-right">
+                      <a href="#" class="icon">
+                        <plus-icon/>
+                      </a>
+                      <a href="#" class="icon">
+                        <more-icon/>
+                      </a>
+                    </div>
+                  </div>
+                  <form class="slide-panel__search-wrap" role="search">
+                    <div class="search">
+                      <div class="icon search__icon">
+                        <magnify-icon/>
+                      </div>
+                      <input
+                        type="text"
+                        class="search__input"
+                        name="search"
+                        placeholder="Search Pages"
+                      >
+                      <button type="button" class="search__input-close">
+                        <close-icon/>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="friends">
+                  <div class="friends__friend">
+                    <nav-message
+                      avatar="./img/Mary Adams.jpg"
+                      title="Mary Adams"
+                      text="Anyways, i would like just do it"
+                    />
+                  </div>
+                  <div class="friends__friend">
+                    <nav-message
+                      online="1"
+                      avatar="./img/Caleb Richards.jpg"
+                      title="Caleb Richards"
+                      text="Anyways, i would like just do it"
+                    />
+                  </div>
+                  <div class="friends__friend">
+                    <nav-message
+                      online="2"
+                      avatar="./img/Crystal Bates.jpg"
+                      title="Crystal Bates"
+                      text="Anyways, i would like just do it"
+                    />
+                  </div>
+                  <div class="friends__friend">
+                    <nav-message
+                      online="2"
+                      avatar="./img/Heather Harper.jpg"
+                      title="Heather Harper"
+                      text="Anyways, i would like just do it"
+                    />
+                  </div>
+                  <div class="friends__friend">
+                    <nav-message
+                      avatar="./img/Ida Fleming.jpg"
+                      title="Ida Fleming"
+                      text="Anyways, i would like just do it"
+                    />
+                  </div>
+                  <div class="friends__friend">
+                    <nav-message
+                      online="2"
+                      avatar="./img/June Lane.jpg"
+                      title="June Lane"
+                      text="Anyways, i would like just do it"
+                    />
+                  </div>
+                  <div class="friends__friend">
+                    <nav-message
+                      avatar="./img/Mary Adams.jpg"
+                      title="Mary Adams"
+                      text="Anyways, i would like just do it"
+                    />
+                  </div>
+                  <div class="friends__friend">
+                    <nav-message
+                      online="1"
+                      avatar="./img/Nathan Watts.jpg"
+                      title="Nathan Watts"
+                      text="Anyways, i would like just do it"
+                    />
+                  </div>
+                  <div class="friends__friend">
+                    <nav-message
+                      online="1"
+                      avatar="./img/Willard Wood.jpg"
+                      title="Willard Wood"
+                      text="Anyways, i would like just do it"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__tab" v-if="activeTab === 1">
+              <div class="slide-panel__inner">
+                <div class="slide-panel__header">
+                  <div class="slide-panel__title">
+                    <div>RECENT ACTIVITY</div>
+                  </div>
+                </div>
+                <div class="activities">
+                  <div class="activities__item" href="#">
+                    <div class="activities__left">
+                      <a href="#" class="activities__icon-wrap">
+                        <cards-heart-icon/>
+                      </a>
+                    </div>
+                    <div class="activities__content">
+                      <div class="activities__time">6 minutes ago</div>
+                      <div class="activities__text">Melissa liked your activity Drinks At My Place.</div>
+                    </div>
+                  </div>
+                  <div class="activities__item" href="#">
+                    <div class="activities__left">
+                      <a href="#" class="activities__icon-wrap green-bg">
+                        <chat-icon/>
+                      </a>
+                    </div>
+                    <div class="activities__content">
+                      <div class="activities__time">10 minutes ago</div>
+                      <div class="activities__text">
+                        Tina is attending your activity Coffee
+                        <br>@Starbucks
+                      </div>
+                    </div>
+                  </div>
+                  <div class="activities__item" href="#">
+                    <div class="activities__left">
+                      <a href="#" class="activities__icon-wrap green-bg">
+                        <email-icon/>
+                      </a>
+                    </div>
+                    <div class="activities__content">
+                      <div class="activities__time">15 minutes ago</div>
+                      <div class="activities__text">Melissa liked your activity Drinks At My Place</div>
+                    </div>
+                  </div>
+                  <div class="activities__item" href="#">
+                    <div class="activities__left">
+                      <a href="#" class="activities__icon-wrap blue-bg">
+                        <plus-icon/>
+                      </a>
+                    </div>
+                    <div class="activities__content">
+                      <div class="activities__time">20 minutes ago</div>
+                      <div class="activities__text">Josh is now following you</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-panel__header">
+                  <div class="slide-panel__title">
+                    <div>RECENT ACTIVITY</div>
+                  </div>
+                </div>
+                <my-progress percent="70" text="Features development"/>
+                <my-progress percent="30" text="Uploading files" lineColor="green"/>
+                <my-progress percent="90" text="Traffc Margins"/>
+              </div>
+            </div>
+            <div class="tabs__tab" v-if="activeTab === 2">
+              <div class="slide-panel__inner">
+                <div class="slide-panel__header">
+                  <div class="slide-panel__title">
+                    <div>GENERAL SETTINGS</div>
+                  </div>
+                </div>
+                <div class="switch">
+                  <div class="switch__header">Notifications</div>
+                  <div
+                    class="switch__text"
+                  >Our very own image-less pure CSS and retina compatible check box.</div>
+                </div>
+                <div class="switch">
+                  <div class="switch__header">Show your emails</div>
+                  <div
+                    class="switch__text"
+                  >Our very own image-less pure CSS and retina compatible check box.Our very own image-less pure CSS and retina .</div>
+                </div>
+                <div class="switch">
+                  <div class="switch__header">Show recent activity</div>
+                  <div class="switch__text">Our very own image-less pure CSS and retina .</div>
+                </div>
+                <div class="switch">
+                  <div class="switch__header">Show recent activity</div>
+                  <div
+                    class="switch__text"
+                  >Our very own image-less pure CSS and retina compatible check box.</div>
+                </div>
+                <div class="switch">
+                  <div class="switch__header">Show Task statistics</div>
+                  <div class="switch__text">Our very own image-less pure CSS and retina .</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </li>
-			
-      <li class="nav-item" id="toggleChat">
-        <a
-          class="nav-link"
-          data-toggle="site-sidebar"
-          href="javascript:void(0)"
-          title="Chat"
-          data-url="../site-sidebar.tpl"
-        >
-          <i class="icon md-comment" aria-hidden="true"></i>
-        </a>
       </li>
     </ul>
   </nav>
 </template>
- 
+
 <script>
 import navMessage from "./nav-message.vue";
+import myProgress from "./my-progress.vue";
 
 export default {
   data() {
@@ -208,30 +416,51 @@ export default {
       active: {
         type: Number,
         default: 0
+      },
+      activeTab: {
+        type: Number,
+        default: 0
       }
     };
   },
   methods: {
-    setActive(number) {
-      if (this.active === number) {
-        this.active = 0;
+    setActive(index, tab) {
+      if (tab) {
+        if (this.activeTab === index) {
+          this.activeTab = 0;
+        } else {
+          this.activeTab = index;
+        }
       } else {
-        this.active = number;
+        if (this.active === index) {
+          this.active = 0;
+        } else {
+          this.active = index;
+        }
       }
     }
   },
+  created: function() {
+    this.activeTab = 0;
+  },
   components: {
-    navMessage
+    navMessage,
+    myProgress
   }
 };
 </script>
 
 <style lang="scss">
 .top-nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
   display: flex;
   justify-content: flex-end;
   font-size: 14px;
   background-color: #2196f3;
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
   &__inner {
     display: flex;
     padding-left: 0;
@@ -245,6 +474,7 @@ export default {
     align-items: center;
   }
   &__link {
+    font-size: 14px;
     color: #fff;
     height: 66px;
     display: flex;
@@ -389,6 +619,7 @@ export default {
     }
   }
   &__left {
+    //123321
     height: 24px;
     width: 24px;
     min-width: 24px;
@@ -396,20 +627,16 @@ export default {
     border-radius: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-align: center;
+    padding-bottom: 4px;
     background-color: #e53935;
     color: #fff;
+
     &_avatar {
       background-color: inherit;
       width: 30px;
       min-width: 30px;
       height: 30px;
-    }
-    &_green {
-      background-color: #43a047;
-    }
-    &_blue {
-      background-color: #1e88e5;
     }
   }
   .badge {
@@ -419,6 +646,51 @@ export default {
     padding: 2.5px 5px;
     border-radius: 100px;
     font-weight: 500;
+  }
+}
+.activities {
+  position: relative;
+  padding: 10px 0;
+  margin-bottom: 40px;
+  &:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1.2px;
+    background-color: #e0e0e0;
+    top: 0;
+    left: 20px;
+    z-index: -1;
+  }
+  &__item {
+    display: flex;
+    z-index: 100;
+    color: #757575;
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 5px;
+    }
+  }
+  &__left {
+    padding-left: 6px;
+    padding-right: 15px;
+  }
+  &__icon-wrap {
+    display: block;
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    background-color: #d81b60;
+    border-radius: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &__time {
+    font-size: 12px;
   }
 }
 </style>

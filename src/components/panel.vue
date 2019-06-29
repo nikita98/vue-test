@@ -28,28 +28,28 @@
         <div class="tabs__tab" v-if="activeTab === 0">
           <div class="post-list">
             <post
-              avatar="./img/2.jpg"
-              name="Terrance arnold"
+              avatar="./img/Julius.jpg"
+              name="Julius"
               description="posted an updated"
               online="active 14 minutes ago"
               text="“Check if it can be corrected with overflow : hidden”"
             ></post>
             <post
-              avatar="./img/3.jpg"
+              avatar="./img/Julius.jpg"
               name="Julius"
               :imgSrc="['./img/animal-2.jpg', './img/animal-3.jpg', './img/animal-4.jpg', './img/animal-5.jpg']"
               description="uploaded 4 photos"
               online="active 14 minutes ago"
             ></post>
             <post
-              avatar="./img/3.jpg"
+              avatar="./img/Owen Hunt.jpg"
               name="Owen Hunt"
               description="posted a new note"
               online="active 14 minutes ago"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa"
             ></post>
             <post
-              avatar="./img/5.webp"
+              avatar="./img/Terrance Arnold.webp"
               name="Terrance Arnold"
               description="uploaded 4 photos"
               :imgSrc="['./img/animal-1.webp']"
@@ -65,7 +65,7 @@
         <div class="tabs__tab" v-if="activeTab === 1">
           <div class="post-list">
             <post
-              avatar="./img/5.webp"
+              avatar="./img/Terrance Arnold.webp"
               name="Terrance Arnold"
               description="uploaded 4 photos"
               :imgSrc="['./img/animal-1.webp']"
@@ -74,22 +74,22 @@
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris."
             ></post>
             <post
-              avatar="./img/3.jpg"
+              avatar="./img/Julius.jpg"
               name="Julius"
               :imgSrc="['./img/animal-2.jpg', './img/animal-3.jpg', './img/animal-4.jpg', './img/animal-5.jpg']"
               description="uploaded 4 photos"
               online="active 14 minutes ago"
             ></post>
             <post
-              avatar="./img/2.jpg"
-              name="Terrance arnold"
+              avatar="./img/Owen Hunt.jpg"
+              name="Owen Hunt"
               description="posted an updated"
               online="active 14 minutes ago"
               text="“Check if it can be corrected with overflow : hidden”"
             ></post>
             <post
-              avatar="./img/3.jpg"
-              name="Owen Hunt"
+              avatar="./img/June Lane.jpg"
+              name="June Lane"
               description="posted a new note"
               online="active 14 minutes ago"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa"
@@ -102,7 +102,7 @@
         <div class="tabs__tab" v-if="activeTab === 2">
           <div class="post-list">
             <post
-              avatar="./img/5.webp"
+              avatar="./img/Terrance Arnold.webp"
               name="Terrance Arnold"
               description="uploaded 4 photos"
               :imgSrc="['./img/animal-1.webp']"
@@ -111,14 +111,14 @@
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris."
             ></post>
             <post
-              avatar="./img/2.jpg"
-              name="Terrance arnold"
+              avatar="./img/Mary Adams.jpg"
+              name="Mary Adams"
               description="posted an updated"
               online="active 14 minutes ago"
               text="“Check if it can be corrected with overflow : hidden”"
             ></post>
             <post
-              avatar="./img/3.jpg"
+              avatar="./img/Owen Hunt.jpg"
               name="Owen Hunt"
               description="posted a new note"
               online="active 14 minutes ago"
@@ -172,35 +172,4 @@ export default {
   }
 }
 
-.tabs {
-  &__links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    border-bottom: 1px solid #e0e0e0;
-  }
-  &__link-wrap {
-    margin-bottom: -1px;
-    display: flex;
-  }
-  &__link {
-    cursor: pointer;
-    color: #757575;
-    transition: 0.25s;
-    padding: 0.715rem 1.429rem;
-    border-bottom: 2px solid transparent;
-    &:hover {
-      border-bottom-color: #bdbdbd;
-    }
-    &.active {
-      color: #2196f3;
-      border-bottom: 2px solid #2196f3;
-      &:hover {
-        color: #2196f3;
-        border-bottom: 2px solid #2196f3;
-      }
-    }
-  }
-}
 </style>
