@@ -61,6 +61,15 @@
 </template>
 
 <script>
+  export default {
+    data() {
+      return {
+        users: [],
+        userName: '',
+        userPass: ''
+      }
+    }
+  };
 </script>
 
 

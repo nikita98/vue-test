@@ -15,6 +15,18 @@ Vue.component("google-plus-icon", GooglePlus);
 
 Vue.config.productionTip = false
 
+var firebaseConfig = {
+	apiKey: "AIzaSyAPTETqL8ZkhQE3hBRt1cLAMv_gC6dGNns",
+	authDomain: "vue-test-cd4c7.firebaseapp.com",
+	databaseURL: "https://vue-test-cd4c7.firebaseio.com",
+	projectId: "vue-test-cd4c7",
+	storageBucket: "",
+	messagingSenderId: "440287325664",
+	appId: "1:440287325664:web:d28276832bbb7b7e"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
 new Vue({
 	render: h => h(Login),
 }).$mount('#login');
